@@ -828,3 +828,5 @@ C:\Users\mahmoud.farahat\Desktop\mvc2\mvc2\Assingment.PL\obj\Debug\net5.0\Razor\
 C:\Users\mahmoud.farahat\Desktop\mvc2\mvc2\Assingment.PL\obj\Debug\net5.0\Razor\Views\Department\Create.cshtml.g.cs
 C:\Users\mahmoud.farahat\Desktop\mvc2\mvc2\Assingment.PL\obj\Debug\net5.0\Razor\Views\Department\Edit.cshtml.g.cs
 C:\Users\mahmoud.farahat\Desktop\mvc2\mvc2\Assingment.PL\obj\Debug\net5.0\Razor\Views\Department\Details.cshtml.g.cs
+C:\Users\mahmoud.farahat\Desktop\mvc2\mvc2\Assingment.PL\obj\Debug\net5.0\Razor\Views\Employee\Index.cshtml.g.cs
+C:\Users\mahmoud.farahat\Desktop\mvc2\mvc2\Assingment.PL\obj\Debug\net5.0\Razor\Views\Employee\Create.cshtml.g.cs

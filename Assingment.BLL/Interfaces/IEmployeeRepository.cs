@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 
 namespace Assingment.BLL.Interfaces
 {
-    public interface IDepartmentRepository: IGenericRepository<Department>
+   public  interface IEmployeeRepository :IGenericRepository<Employee>
     {
-     
+ 
     }
 }
