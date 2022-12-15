@@ -11,22 +11,22 @@ namespace Assingment.PL.Controllers
 {
     public class EmployeeController : Controller
     {
-        private IEmployeeRepository _repository;
+        private IunitOfWork _unitOfWork;
 
-        public EmployeeController(IEmployeeRepository repository)
+        public EmployeeController(IunitOfWork  unitOfWork)
         {
-            _repository = repository;
+            _unitOfWork = unitOfWork;
         }
 
         public IActionResult Index()
         {
-            var employees = _repository.GetAll();
+            var employees = _unitOfWork.EmployeeRepository.GetAll();
             return View(employees);
         }
 
         public IActionResult Details(int id)
         {
-            var employee = _repository.GetById(id);
+            var employee = _unitOfWork.EmployeeRepository.GetById(id);
             if (employee is null)
                 return NotFound();
             return View(employee);
@@ -36,7 +36,7 @@ namespace Assingment.PL.Controllers
         {
             if (ModelState.IsValid)
             {
-                _repository.Add(employee);
+                _unitOfWork.EmployeeRepository.Add(employee);
                 return RedirectToAction(nameof(Index));
             }
             return View(employee);

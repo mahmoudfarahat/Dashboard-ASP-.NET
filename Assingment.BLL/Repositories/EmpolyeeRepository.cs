@@ -9,39 +9,19 @@ using System.Threading.Tasks;
 
 namespace Assingment.BLL.Repositories
 {
-    public class EmpolyeeRepository : IEmployeeRepository
+    public class EmpolyeeRepository : GenericRepository<Employee> , IEmployeeRepository
     {
         private MVCAppDbContext _context;
 
-        public EmpolyeeRepository(MVCAppDbContext context)
+        public EmpolyeeRepository(MVCAppDbContext context):base(context)
         {
             _context = context;
         }
-        public Employee GetById(int id)
-        {
-            return _context.Employees.Find(id);
-        }
 
-        public IEnumerable<Employee> GetAll()
-           => _context.Employees.ToList();
-        
-
-        public int Add(Employee Employee)
+        public IEnumerable<Employee> GetEmployeesByDepartments(string name)
         {
-            _context.Employees.Add(Employee);
-            return _context.SaveChanges();
+            throw new NotImplementedException();
         }
-
-        public int Update(Employee Employee)
-        {
-            _context.Employees.Update(Employee);
-            return _context.SaveChanges();
-        }
-
-        public int Remove(Employee Employee)
-        {
-            _context.Employees.Remove(Employee);
-            return _context.SaveChanges();
-        }
+       
     }
 }

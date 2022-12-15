@@ -9,6 +9,6 @@ namespace Assingment.BLL.Interfaces
 {
    public  interface IEmployeeRepository :IGenericRepository<Employee>
     {
- 
+        IEnumerable<Employee> GetEmployeesByDepartments(string name);
     }
 }
