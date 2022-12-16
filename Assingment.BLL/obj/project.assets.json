@@ -5719,24 +5719,30 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mahmoud.farahat\\.nuget\\packages\\": {},
+    "C:\\Users\\Mahmoud\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mahmoud.farahat\\Desktop\\mvc2\\mvc2\\Assingment.BLL\\Assingment.BLL.csproj",
+      "projectUniqueName": "C:\\Users\\Mahmoud\\Desktop\\Dashboard-ASP-.NET\\Assingment.BLL\\Assingment.BLL.csproj",
       "projectName": "Assingment.BLL",
-      "projectPath": "C:\\Users\\mahmoud.farahat\\Desktop\\mvc2\\mvc2\\Assingment.BLL\\Assingment.BLL.csproj",
-      "packagesPath": "C:\\Users\\mahmoud.farahat\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mahmoud.farahat\\Desktop\\mvc2\\mvc2\\Assingment.BLL\\obj\\",
+      "projectPath": "C:\\Users\\Mahmoud\\Desktop\\Dashboard-ASP-.NET\\Assingment.BLL\\Assingment.BLL.csproj",
+      "packagesPath": "C:\\Users\\Mahmoud\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mahmoud\\Desktop\\Dashboard-ASP-.NET\\Assingment.BLL\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\mahmoud.farahat\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Mahmoud\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net5.0"
@@ -5749,8 +5755,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\mahmoud.farahat\\Desktop\\mvc2\\mvc2\\Assingment.DAL\\Assingment.DAL.csproj": {
-              "projectPath": "C:\\Users\\mahmoud.farahat\\Desktop\\mvc2\\mvc2\\Assingment.DAL\\Assingment.DAL.csproj"
+            "C:\\Users\\Mahmoud\\Desktop\\Dashboard-ASP-.NET\\Assingment.DAL\\Assingment.DAL.csproj": {
+              "projectPath": "C:\\Users\\Mahmoud\\Desktop\\Dashboard-ASP-.NET\\Assingment.DAL\\Assingment.DAL.csproj"
             }
           }
         }
@@ -5779,7 +5785,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

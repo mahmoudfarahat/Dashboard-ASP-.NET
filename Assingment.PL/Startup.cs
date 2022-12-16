@@ -2,6 +2,7 @@
 using Assingment.BLL.Interfaces;
 using Assingment.BLL.Repositories;
 using Assingment.DAL.Contexts;
+using Assingment.PL.Mapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -35,7 +36,8 @@ namespace Assingment.PL
             );
             services.AddScoped<IDepartmentRepository, DepartmentRepository>();
             services.AddScoped<IEmployeeRepository, EmpolyeeRepository>();
-
+            services.AddScoped<IunitOfWork, UnitOfWork>();
+            services.AddAutoMapper(m => m.AddProfile(new MappingProfiles()));
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

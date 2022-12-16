@@ -10,17 +10,17 @@ namespace Assingment.PL.Controllers
 {
     public class DepartmentController : Controller
     {
-        private IDepartmentRepository _repository;
+        private IunitOfWork _unitOfWork;
 
-        public DepartmentController(IDepartmentRepository repository)
+        public DepartmentController(IunitOfWork unitOfWork)
         {
-            _repository = repository;
+            _unitOfWork = unitOfWork;
 
         }
 
         public IActionResult Index()
         {
-            var departments = _repository.GetAll();
+            var departments = _unitOfWork.DepartmentRepository.GetAll();
 
             return View(departments);
         }
@@ -35,17 +35,17 @@ namespace Assingment.PL.Controllers
         {
             if(ModelState.IsValid)
             {
-                _repository.Add(department);
+                _unitOfWork.DepartmentRepository.Add(department);
                 return RedirectToAction(nameof(Index));
             }
             return View(department);
         }
 
-        public IActionResult Edit(int? id)
+        public IActionResult Edit(int?  id)
         {
             if (id is null)
                 return NotFound();
-            var department = _repository.GetById(id);
+            var department = _unitOfWork.DepartmentRepository.GetById(id);
             if (department is null)
                 return NotFound();
 
@@ -58,7 +58,7 @@ namespace Assingment.PL.Controllers
                 return NotFound();
             if (ModelState.IsValid)
             {
-                _repository.Update(department);
+                _unitOfWork.DepartmentRepository.Update(department);
                 return RedirectToAction(nameof(Index));
             }
             return View(department);
@@ -68,7 +68,7 @@ namespace Assingment.PL.Controllers
         {
             if (id is null)
                 return NotFound();
-            var department = _repository.GetById(id);
+            var department = _unitOfWork.DepartmentRepository.GetById(id);
             if (department is null)
                 return NotFound();
 
@@ -79,7 +79,7 @@ namespace Assingment.PL.Controllers
         {
             if (id != department.Id)
                 return NotFound();
-            _repository.Delete(department);
+            _unitOfWork.DepartmentRepository.Remove(department);
             return RedirectToAction(nameof(Index));
         }
     }

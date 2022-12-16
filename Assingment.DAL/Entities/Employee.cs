@@ -17,6 +17,7 @@ namespace Assingment.DAL.Entities
         public string Address { get; set; }
         [DataType(DataType.Currency)]
         public decimal Salary { get; set; }
+        public String Email { get; set; }
 
         public bool IsActive { get; set; }
 

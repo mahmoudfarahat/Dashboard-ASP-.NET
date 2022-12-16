@@ -59,6 +59,9 @@ namespace Assingment.DAL.Migrations
                     b.Property<int?>("DepartmentId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("HireDate")
                         .HasColumnType("datetime2");
 
