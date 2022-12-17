@@ -44,5 +44,35 @@ namespace Assingment.PL.Controllers
             }    
             return View(model);
         }
+
+        public IActionResult SignIn()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> SignIn(LoginViewModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user is null)
+                    ModelState.AddModelError("", "Invalid Email");
+                var password = await _userManager.CheckPasswordAsync(user, model.Password);
+                if(password)
+                {
+                    var result = await _signInManager.PasswordSignInAsync(user, model.Password , model.RememberMe,false);
+                    if (result.Succeeded)
+                        return RedirectToAction("Index", "Home");
+                }
+            }
+            return View(model);
+        }
+
+        public async Task<IActionResult> SignOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction(nameof(SignIn));
+
+        }
     }
 }

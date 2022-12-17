@@ -29,6 +29,8 @@
                 <th>@Html.DisplayNameFor(a => a.Address)</th>
                 <th>@Html.DisplayNameFor(a => a.Email)</th>
                 <th>@Html.DisplayNameFor(a => a.Salary)</th>
+                <td>@Html.DisplayNameFor(a => a.Image)</td>
+
                 <td>@Html.DisplayNameFor(a => a.HireDate)</td>
                 @*<th>@Html.DisplayNameFor(a => a.IsActive)</th>*@
                 <th>Details</th>
@@ -45,7 +47,9 @@
                 <td>@Html.DisplayFor(a => item.Address)</td>
                 <td>@Html.DisplayFor(a => item.Email)</td>
                 <td>@Html.DisplayFor(a => item.Salary)</td>
-              
+              <td>
+                  <img src="~/imgs/@item.ImageName" class="img-circle" height="40" />
+              </td>
                 <th>@Html.DisplayFor(a => item.HireDate.Day)-@Html.DisplayFor(a => item.HireDate.Month)-@Html.DisplayFor(a => item.HireDate.Year)</th>
                 @*<td>@Html.DisplayFor(a => item.IsActive)</td>*@
                 <td>

@@ -25,7 +25,7 @@ namespace Assingment.DAL.Entities
         public DateTime HireDate { get; set; }
 
         public DateTime DateOfCreation { get; set; } = DateTime.Now;
-
+        public string ImageName { get; set; }
         public int DepartmentId { get; set; }
         public Department Department { get; set; }
     }

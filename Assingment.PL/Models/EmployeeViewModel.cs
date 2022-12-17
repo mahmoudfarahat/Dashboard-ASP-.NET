@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -26,6 +27,9 @@ namespace Assingment.PL.Models
         public DateTime DateOfCreation { get; set; } = DateTime.Now;
 
         public int DepartmentId { get; set; }
-         
+
+        public string ImageName { get; set; }
+        public IFormFile Image { get; set; }
+
     }
 }
