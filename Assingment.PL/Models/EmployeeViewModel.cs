@@ -25,6 +25,7 @@ namespace Assingment.PL.Models
 
         public DateTime DateOfCreation { get; set; } = DateTime.Now;
 
+        public int DepartmentId { get; set; }
          
     }
 }

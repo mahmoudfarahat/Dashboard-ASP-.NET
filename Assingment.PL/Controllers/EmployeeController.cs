@@ -22,11 +22,21 @@ namespace Assingment.PL.Controllers
             _mapper = mapper;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string SearchValue ="")
         {
-            var employees = _unitOfWork.EmployeeRepository.GetAll();
-            var mappedEmployees = _mapper.Map<IEnumerable<EmployeeViewModel>>(employees);
-            return View(mappedEmployees);
+            if(string.IsNullOrEmpty(SearchValue))
+            {
+                var employees = _unitOfWork.EmployeeRepository.GetAll();
+                var mappedEmployees = _mapper.Map<IEnumerable<EmployeeViewModel>>(employees);
+                return View(mappedEmployees);
+            }
+            else
+            {
+                var employees = _unitOfWork.EmployeeRepository.Search(SearchValue);
+                var mappedEmployees = _mapper.Map<IEnumerable<EmployeeViewModel>>(employees);
+                return View(mappedEmployees);
+            }
+           
         }
 
         public IActionResult Details(int id)
@@ -34,23 +44,14 @@ namespace Assingment.PL.Controllers
             var employee = _unitOfWork.EmployeeRepository.GetById(id);
             if (employee is null)
                 return NotFound();
-            EmployeeViewModel employeeViewModel = new EmployeeViewModel()
-            {
-                Id = employee.Id,
-                Address = employee.Address,
-                DateOfCreation = employee.DateOfCreation,
-                Email = employee.Email,
-                HireDate = employee.HireDate,
-                IsActive = employee.IsActive,
-                Name = employee.Name,
-                Salary = employee.Salary
-            };
-
+           var employeeViewModel = _mapper.Map<EmployeeViewModel>(employee);
+      
             return View(employeeViewModel);
         }
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.Departments = _unitOfWork.DepartmentRepository.GetAll();
             return View();
         }
         [HttpPost]
@@ -62,12 +63,36 @@ namespace Assingment.PL.Controllers
                 _unitOfWork.EmployeeRepository.Add(employee);
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.Departments = _unitOfWork.DepartmentRepository.GetAll();
             return View(employeeViewModel);
     
         }
+        public IActionResult Edit(int id )
+        {
+            var employee = _unitOfWork.EmployeeRepository.GetById(id);
+            var employeeViewModel = _mapper.Map<EmployeeViewModel>(employee);
+            ViewBag.Departments = _unitOfWork.DepartmentRepository.GetAll();
+            return View(employeeViewModel);
+        }
+        [HttpPost]
+        public IActionResult Edit(int id, EmployeeViewModel employeeViewModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var employee = _mapper.Map<Employee>(employeeViewModel);
+                _unitOfWork.EmployeeRepository.Update(employee);
+                return RedirectToAction(nameof(Index));
+            }
+            ViewBag.Departments = _unitOfWork.DepartmentRepository.GetAll();
+            return View(employeeViewModel);
+        }
 
-
-
+       public IActionResult Delete(int id, EmployeeViewModel employeeViewModel)
+        {
+            var employee = _mapper.Map<Employee>(employeeViewModel)
+ ;            _unitOfWork.EmployeeRepository.Remove(employee);
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 }

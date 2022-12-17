@@ -18,9 +18,9 @@ namespace Assingment.BLL.Repositories
             _context = context;
         }
 
-        public IEnumerable<Employee> GetEmployeesByDepartments(string name)
+        public IEnumerable<Employee> Search(string name)
         {
-            throw new NotImplementedException();
+            return _context.Employees.Where(e => e.Name.Contains(name)).ToList();
         }
        
     }

@@ -1,4 +1,5 @@
 ﻿using Assingment.DAL.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Assingment.DAL.Contexts
 {
-    public  class MVCAppDbContext : DbContext
+    public  class MVCAppDbContext : IdentityDbContext<ApplicationUser>
     {
         public MVCAppDbContext(DbContextOptions<MVCAppDbContext> options) : base(options)
         {

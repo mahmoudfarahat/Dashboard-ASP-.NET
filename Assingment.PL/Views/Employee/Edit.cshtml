@@ -1,19 +1,17 @@
 ﻿@model EmployeeViewModel
-
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
 }
 
+<h1>Update Employee</h1>
+<br />
 
-<h1>Add New Employee</h1>
-<br />
-<br />
 
 <div class="row">
     <div class="col-6">
         <div asp-validation-summary="All"></div>
         <form asp-action="Create" asp-controller="Employee">
-            <partial name="PartialViews/CreateUpdatePartialView" model="@Model"/>
+            <partial name="PartialViews/CreateUpdatePartialView" model="@Model" />
             <br />
             <input type="submit" value="Add" class="btn btn-primary" />
             <a asp-action="Index" class="btn btn-light">Back To List</a>

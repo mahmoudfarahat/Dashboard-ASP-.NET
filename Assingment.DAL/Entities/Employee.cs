@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Identity;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Assingment.DAL.Entities
 {
-    public  class Employee
+    public  class Employee  
     {
         public int Id { get; set; }
         [Required]
@@ -25,6 +26,7 @@ namespace Assingment.DAL.Entities
 
         public DateTime DateOfCreation { get; set; } = DateTime.Now;
 
+        public int DepartmentId { get; set; }
         public Department Department { get; set; }
     }
 }

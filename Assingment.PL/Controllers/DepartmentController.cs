@@ -21,13 +21,16 @@ namespace Assingment.PL.Controllers
         public IActionResult Index()
         {
             var departments = _unitOfWork.DepartmentRepository.GetAll();
-
+            //ViewData["message"] = "All Departments";
+            ViewBag.Message = "All Departments";
+         
             return View(departments);
         }
 
         [HttpGet]
         public IActionResult Create()
         {
+          
             return View();
         }
         [HttpPost]
@@ -36,8 +39,11 @@ namespace Assingment.PL.Controllers
             if(ModelState.IsValid)
             {
                 _unitOfWork.DepartmentRepository.Add(department);
+                TempData["Message"] = "Department is Successfully Added";
                 return RedirectToAction(nameof(Index));
             }
+          
+
             return View(department);
         }
 
