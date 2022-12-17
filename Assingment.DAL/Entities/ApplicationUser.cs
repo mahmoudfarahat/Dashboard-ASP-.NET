@@ -10,6 +10,6 @@ namespace Assingment.DAL.Entities
     public class ApplicationUser : IdentityUser
     {
 
-        public bool IsActive { get; set; }
+        public bool IsAgree { get; set; }
     }
 }

@@ -1277,3 +1277,6 @@ C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Employee\Details.cshtml.g.cs
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Employee\Edit.cshtml.g.cs
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Account\SignIn.cshtml.g.cs
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Account\SignUp.cshtml.g.cs
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Shared\_AuthLayout.cshtml.g.cs
