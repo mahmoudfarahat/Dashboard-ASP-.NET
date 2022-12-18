@@ -1,4 +1,5 @@
 ﻿using Assingment.DAL.Entities;
+using Assingment.PL.Helper;
 using Assingment.PL.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -73,6 +74,36 @@ namespace Assingment.PL.Controllers
             await _signInManager.SignOutAsync();
             return RedirectToAction(nameof(SignIn));
 
+        }
+        public IActionResult ForgetPassword()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ForgetPassword(ForgetPasswordViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if(user != null)
+                {
+                    var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                    var resetPasswodLink = Url.Action("ResetPassword","Account",new { Email= model.Email , Token = token },
+                        Request.Scheme);
+
+                    var email = new Email()
+                    {
+                        Title = "Reset Password",
+                        Body = resetPasswodLink,
+                        To = model.Email
+                    };
+                    EmailSettings.SendEmail(email);
+                    return RedirectToAction();
+                }
+                ModelState.AddModelError("", "Invalid Email");
+            }
+            return View(model);
         }
     }
 }

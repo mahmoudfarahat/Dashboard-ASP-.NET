@@ -112,6 +112,7 @@ namespace Assingment.PL.Controllers
  ;            _unitOfWork.EmployeeRepository.Remove(employee);
             return RedirectToAction(nameof(Index));
         }
+   
 
     }
 }
