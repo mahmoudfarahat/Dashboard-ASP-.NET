@@ -29,9 +29,9 @@
                 <th>@Html.DisplayNameFor(a => a.Address)</th>
                 <th>@Html.DisplayNameFor(a => a.Email)</th>
                 <th>@Html.DisplayNameFor(a => a.Salary)</th>
-                <td>@Html.DisplayNameFor(a => a.Image)</td>
+                <th>@Html.DisplayNameFor(a => a.Image)</th>
 
-                <td>@Html.DisplayNameFor(a => a.HireDate)</td>
+                <th>@Html.DisplayNameFor(a => a.HireDate)</th>
                 @*<th>@Html.DisplayNameFor(a => a.IsActive)</th>*@
                 <th>Details</th>
                 <th>Update</th>
@@ -50,7 +50,7 @@
               <td>
                   <img src="~/imgs/@item.ImageName" class="img-circle" height="40" />
               </td>
-                <th>@Html.DisplayFor(a => item.HireDate.Day)-@Html.DisplayFor(a => item.HireDate.Month)-@Html.DisplayFor(a => item.HireDate.Year)</th>
+                <td>@Html.DisplayFor(a => item.HireDate.Day)-@Html.DisplayFor(a => item.HireDate.Month)-@Html.DisplayFor(a => item.HireDate.Year)</td>
                 @*<td>@Html.DisplayFor(a => item.IsActive)</td>*@
                 <td>
                     <a class="btn btn-success" asp-action="Details" asp-route-id="@item.Id">

@@ -1,11 +1,13 @@
 ﻿using Assingment.BLL.Interfaces;
 using Assingment.BLL.Repositories;
 using Assingment.DAL.Entities;
+using Assingment.PL.Helper;
 using Assingment.PL.Models;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -59,6 +61,7 @@ namespace Assingment.PL.Controllers
         {
             if (ModelState.IsValid)
             {
+                employeeViewModel.ImageName = DocumentSettings.UploadFile(employeeViewModel.Image, "imgs");
                 var employee = _mapper.Map<Employee>(employeeViewModel);
                 _unitOfWork.EmployeeRepository.Add(employee);
                 return RedirectToAction(nameof(Index));
@@ -79,7 +82,23 @@ namespace Assingment.PL.Controllers
         {
             if (ModelState.IsValid)
             {
-                var employee = _mapper.Map<Employee>(employeeViewModel);
+                var employeeFromDatabase = _unitOfWork.EmployeeRepository.GetById(id);
+
+                if (employeeViewModel.Image != null)
+                {
+                    if (employeeFromDatabase.ImageName != null)
+
+                    {
+                        string folderPath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "imgs");
+                        string filePath = Path.Combine(folderPath, employeeFromDatabase.ImageName);
+                        System.IO.File.Delete(filePath);
+                    }
+
+                    employeeViewModel.ImageName = DocumentSettings.UploadFile(employeeViewModel.Image, "imgs");
+
+                }
+
+                var employee  = _mapper.Map(employeeViewModel, employeeFromDatabase);
                 _unitOfWork.EmployeeRepository.Update(employee);
                 return RedirectToAction(nameof(Index));
             }
