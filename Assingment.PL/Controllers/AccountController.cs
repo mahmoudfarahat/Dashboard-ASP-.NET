@@ -99,11 +99,43 @@ namespace Assingment.PL.Controllers
                         To = model.Email
                     };
                     EmailSettings.SendEmail(email);
-                    return RedirectToAction();
+                    return RedirectToAction(nameof(CompleteForgetPassword));
                 }
                 ModelState.AddModelError("", "Invalid Email");
             }
             return View(model);
+        }
+
+        public IActionResult CompleteForgetPassword()
+        {
+            return View();
+        }
+
+        public IActionResult ResetPassword(string Email, string Token)
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
+        {
+           if(ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if(user != null)
+                {
+                    var result = await _userManager.ResetPasswordAsync(user, model.Token, model.Password);
+                    if (result.Succeeded)
+                        return RedirectToAction(nameof(ResetPasswordDone));
+                    foreach (var error in result.Errors)
+                        ModelState.AddModelError(String.Empty, error.Description);
+                }
+            }
+            return View(model);
+        }
+
+        public IActionResult ResetPasswordDone()
+        {
+            return View();
         }
     }
 }
