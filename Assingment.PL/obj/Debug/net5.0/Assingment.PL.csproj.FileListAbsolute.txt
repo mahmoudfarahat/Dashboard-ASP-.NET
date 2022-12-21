@@ -849,7 +849,6 @@ C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Assin
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Assingment.PL.runtimeconfig.json
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Assingment.PL.runtimeconfig.dev.json
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Assingment.PL.dll
-C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\ref\Assingment.PL.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Assingment.PL.pdb
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
@@ -1244,7 +1243,6 @@ C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Assin
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Assingment.BLL.pdb
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\Assingment.DAL.pdb
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\staticwebassets\Assingment.PL.StaticWebAssets.Manifest.cache
-C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\staticwebassets\Assingment.PL.StaticWebAssets.xml
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\scopedcss\bundle\Assingment.PL.styles.css
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Assingment.PL.TagHelpers.input.cache
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Assingment.PL.TagHelpers.output.cache
@@ -1289,3 +1287,6 @@ C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Users\PartialViews\CreateEditPartialView.cshtml.g.cs
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Users\PartialViews\DetailsDeletePartialView.cshtml.g.cs
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Users\Update.cshtml.g.cs
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\bin\Debug\net5.0\ref\Assingment.PL.dll
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\staticwebassets\Assingment.PL.StaticWebAssets.xml
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.PL\obj\Debug\net5.0\Razor\Views\Shared\_ButtonsPartialView.cshtml.g.cs

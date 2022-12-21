@@ -30,7 +30,6 @@ C:\Users\mahmoud.farahat\Desktop\mvc2\mvc2\Assingment.BLL\obj\Debug\net5.0\ref\A
 C:\Users\mahmoud.farahat\Desktop\mvc2\mvc2\Assingment.BLL\obj\Debug\net5.0\Assingment.BLL.pdb
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\bin\Debug\net5.0\Assingment.BLL.deps.json
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\bin\Debug\net5.0\Assingment.BLL.dll
-C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\bin\Debug\net5.0\ref\Assingment.BLL.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\bin\Debug\net5.0\Assingment.BLL.pdb
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\bin\Debug\net5.0\Assingment.DAL.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\bin\Debug\net5.0\Assingment.DAL.pdb
@@ -43,3 +42,4 @@ C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\Assi
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\Assingment.BLL.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\ref\Assingment.BLL.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\Assingment.BLL.pdb
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\bin\Debug\net5.0\ref\Assingment.BLL.dll
