@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Assingment.DAL.Contexts
 {
-    public  class MVCAppDbContext : IdentityDbContext<ApplicationUser>
+    public  class MVCAppDbContext : IdentityDbContext<ApplicationUser,ApplicationRole, string>
     {
         public MVCAppDbContext(DbContextOptions<MVCAppDbContext> options) : base(options)
         {

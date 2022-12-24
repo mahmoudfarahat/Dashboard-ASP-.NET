@@ -42,4 +42,4 @@ C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\Assi
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\Assingment.BLL.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\ref\Assingment.BLL.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\Assingment.BLL.pdb
-C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\bin\Debug\net5.0\ref\Assingment.BLL.dll
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.BLL\obj\Debug\net5.0\refint\Assingment.BLL.dll

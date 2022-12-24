@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,12 @@ namespace Assingment.PL.Controllers
     public class UsersController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
+      
 
-        public UsersController(UserManager<ApplicationUser> userManager)
+        public UsersController(UserManager<ApplicationUser> userManager  )
         {
             _userManager = userManager;
+        
         }
 
         public async Task<IActionResult> Index(string SearchValue ="")
@@ -77,6 +80,27 @@ namespace Assingment.PL.Controllers
             }
             return View(User);
         }
+        public async Task<IActionResult> Delete(String id, ApplicationUser user)
+        {
+            if (id != user.Id)
+                return BadRequest();
+            try
+            {
+                var appUser = await _userManager.FindByIdAsync(id);
+                var result = await _userManager.DeleteAsync(appUser);
 
+                if (result.Succeeded)
+                {
+                    return RedirectToAction(nameof(Index));
+                }
+                ViewBag.Errors = result.Errors;
+       
+            }
+            catch(Exception ex)
+            {
+                
+            }
+            return RedirectToAction(nameof(Index));
+        }
     }
 }

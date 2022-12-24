@@ -42,4 +42,4 @@ C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.DAL\obj\Debug\net5.0\Assi
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.DAL\obj\Debug\net5.0\ref\Assingment.DAL.dll
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.DAL\obj\Debug\net5.0\Assingment.DAL.pdb
 C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.DAL\obj\Debug\net5.0\Assingment.DAL.genruntimeconfig.cache
-C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.DAL\bin\Debug\net5.0\ref\Assingment.DAL.dll
+C:\Users\Mahmoud\Desktop\Dashboard-ASP-.NET\Assingment.DAL\obj\Debug\net5.0\refint\Assingment.DAL.dll

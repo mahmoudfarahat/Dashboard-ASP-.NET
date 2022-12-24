@@ -48,7 +48,7 @@ namespace Assingment.PL
                     options.LoginPath = new PathString("/Account/Login");
                     options.AccessDeniedPath = new PathString("/Home/Error");
                 });
-            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            services.AddIdentity<ApplicationUser, ApplicationRole>(options =>
              {
                  options.Password.RequireDigit = true;
                  options.Password.RequireLowercase = true;
